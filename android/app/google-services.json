@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "766925146237",
+    "project_id": "navapp-32339",
+    "storage_bucket": "navapp-32339.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766925146237:android:7e43b5e520c5668338c914",
+        "android_client_info": {
+          "package_name": "com.example.navigator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMGQSdqCEA7f_dJ08h2D3lpw8hEAEluhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

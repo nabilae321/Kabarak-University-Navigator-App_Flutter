@@ -1,0 +1,65 @@
+// Inside _MapScreenState class
+import 'material.dart'
+
+String _searchQuery = '';
+List<CustomPlace> _customPlaces = [
+  CustomPlace(
+    title: 'Lecture room 5',
+    description: 'First room in the East wing left side of Admin Block',
+    position: LatLng(-0.167338, 35.966310),
+  ),
+  CustomPlace(
+    title: 'Physics Lab 2',
+    description: 'Near physics lab 1',
+    position: LatLng(-0.167776, 35.965688),
+  ),
+  CustomPlace(
+    title: 'Physics Lab 2',
+    description: 'General Biology Lab',
+    position: LatLng(-0.167481, 35.966121),
+  ),
+  // Add more custom places as needed
+];
+
+void _onSearchSubmitted(String query) {
+  setState(() {
+    _searchQuery = query;
+  });
+}
+
+Set<Marker> _getFilteredMarkers() {
+  return _customPlaces
+      .where((place) =>
+          place.title.toLowerCase().contains(_searchQuery.toLowerCase()) ||
+          place.description.toLowerCase().contains(_searchQuery.toLowerCase()))
+      .map((place) => Marker(
+            markerId: MarkerId(place.title),
+            position: place.position,
+            infoWindow: InfoWindow(
+              title: place.title,
+              snippet: place.description,
+            ),
+          ))
+      .toSet();
+}
+
+// Inside build method
+
+body: Column(
+  children: [
+    // Add a search bar widget
+    SearchBar(
+      onSubmitted: _onSearchSubmitted,
+    ),
+    Expanded(
+      child: GoogleMap(
+        onMapCreated: _onMapCreated,
+        initialCameraPosition: CameraPosition(
+          target: _center,
+          zoom: 11.0,
+        ),
+        markers: _getFilteredMarkers(),
+      ),
+    ),
+  ],
+),

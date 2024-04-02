@@ -44,6 +44,9 @@ dependencies:
   http: ^1.2.1
   geolocator: ^11.0.0
   geocoding: ^3.0.0
+  collection: ^1.18.0
+  google_directions_api: ^0.10.0
+  flutter_tts: ^4.0.2
 
 dev_dependencies:
   flutter_test:

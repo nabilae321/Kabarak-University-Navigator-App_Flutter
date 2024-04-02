@@ -1,9 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:navigator/authcontrol/login_or_register.dart';
-import 'package:navigator/custom_search.dart';
-//import 'package:navigator/custom_search.dart';
-//import 'package:navigator/pages/map_page.dart';
+import 'package:navigator/pages/custom_search.dart';
+import 'package:navigator/pages/map_page.dart';
 
 class AuthState extends StatelessWidget {
   const AuthState({super.key});

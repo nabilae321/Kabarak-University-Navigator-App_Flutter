@@ -1,9 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:navigator/authcontrol/auth_state.dart';
-//import 'package:navigator/authcontrol/login_or_register.dart';
 import 'package:navigator/firebase_options.dart';
-//import 'package:navigator/pages/map_page.dart';
 import 'package:navigator/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
